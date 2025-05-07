@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Surah Player App</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/222a501460.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="music-player">
+                <nav>
+                    <div class="circle">
+
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <div class="circle">
+
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    
+                </nav>
+                <img src="quran.jpg" class="song-img">
+                <h1>Surah Ar Rahman</h1>
+                <p>Omar Hisham Al Arabi</p>
+                <audio id="song">
+                    <source src="Surah Ar-Rahman (Be Heaven) سورة الرحمن.mp3" type="audio/mpeg">
+                </audio id='song'>
+                <input type="range" value="0" id="progress">
+                <div class="controls">
+                    <div>
+                        <i class="fa-solid fa-backward"></i>
+                    </div>
+                    <div onclick="playPause()">
+                        <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-forward"></i>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>        
+
+        <script src="script.js"></script>
+
+
+    </body>
+</html>

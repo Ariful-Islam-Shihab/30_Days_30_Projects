@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Popup Design</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+
+            <div class="popup" id="popup">
+                <img src="tick.png">
+                <h2>Thank you!</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, asperiores!</p>
+                <button type="button" onclick="closePopup()">Okay!</button>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+        
+        <script>    
+
+
+            let popup=document.getElementById('popup')
+            function openPopup(){
+                popup.classList.add('openpopup')
+            }
+            function closePopup(){
+                popup.classList.remove('openpopup')
+            }
+
+            
+        </script>
+
+
+
+    </body>
+</html>

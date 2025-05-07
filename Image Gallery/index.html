@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Image Gellery</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="gallery-wrap">
+            <img src="images/back.png" id="backBtn">
+            <div class="gallery">
+                <div>
+                    <span><img src="images/image-1.png"></span>
+                    <span><img src="images/image-2.png"></span>
+                    <span><img src="images/image-3.png"></span>
+                </div>
+                <div>
+                    <span><img src="images/image-4.png"></span>
+                    <span><img src="images/image-5.png"></span>
+                    <span><img src="images/image-6.png"></span>
+                </div>
+            </div>
+            <div class="gallery-wrap">
+                <img src="images/next.png" id="nextBtn">
+            </div>
+        </div>
+        <script>
+            let scrollcontainer=document.querySelector('.gallery')
+            let backBtn=document.getElementById('backBtn')
+            let nextBtn=document.getElementById('nextBtn')
+            scrollcontainer.addEventListener('wheel',(evt)=>{
+                evt.preventDefault()
+                scrollcontainer.scrollLeft+=evt.deltaY
+            })
+            nextBtn.addEventListener('click',()=>{
+                scrollcontainer.scrollLeft+=900
+                scrollcontainer.style.scrollBehavior='smooth'
+            })
+            backBtn.addEventListener('click',()=>{
+                
+                scrollcontainer.scrollLeft-=900
+                scrollcontainer.style.scrollBehavior='smooth'
+            })
+            
+        </script>
+    </body>
+</html>

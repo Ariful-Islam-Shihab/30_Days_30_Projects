@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Image Transition</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="img-box">
+                <img src="background_change_img/transparent.png" alt="" width="100%">
+                <div class="img-wrap">
+                    <img src="background_change_img/original.jpg" alt="" id="originalImg">
+
+                </div>
+                <span id="line">
+                    <img src="background_change_img/arrow.png" class="arrow">
+                </span>
+            </div>
+        </div>
+        <script>
+            var ImgBox=document.querySelector('.img-box')
+            var ImgWrap=document.querySelector('.img-wrap')
+            var og=document.getElementById('originalImg')
+            var line=document.getElementById('line')
+            og.style.width=ImgBox.offsetWidth+'px'
+            var leftSpace=ImgBox.offsetLeft
+            ImgBox.onmousemove=(e)=>{
+                var boxWidth=(e.pageX-leftSpace)+'px'
+                ImgWrap.style.width=boxWidth
+                line.style.left=boxWidth
+            }
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
